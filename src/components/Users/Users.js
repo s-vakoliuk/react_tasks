@@ -1,6 +1,6 @@
 import {useEffect, useState} from "react";
-
 import User from "./User";
+import './Users.css';
 
 const Users = () => {
     const [users, setUsers]=useState([]);
@@ -11,8 +11,8 @@ const Users = () => {
             .then(value=>setUsers(value))
     }, [])
     return (
-        <div>
-            {users.map(value=> <User key={value.id} id={value.id} name={value.name} surname={value.surname} email={value.email} address={value.address}/>)}
+        <div className={'wrapUsers'}>
+            {users.map(value=> <User key={value.id} id={value.id} name={value.name} surname={value.surname} email={value.email} />)}
         </div>
     );
 };

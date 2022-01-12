@@ -1,12 +1,21 @@
-
+import React from 'react';
 import './App.css';
-import User from "./components/Users/User";
 
-function App() {
+import Users from "./components/Users/Users";
+import Posts from "./components/Posts/Posts";
+import Comments from "./components/Comments/Comments";
+
+const App=()=> {
   return (
-    <div className={'users'}>
-      <User/>
-    </div>
+      <div>
+      <h1>Відображення даних з сайту "jsonplaceholder.typicode.com"</h1>
+          <div className={'wrapper'}>
+              <Users/>
+              <Posts/>
+          </div>
+          <Comments/>
+
+      </div>
   );
 }
 

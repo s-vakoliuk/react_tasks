@@ -1,17 +1,13 @@
-import React from 'react';
+import './User.css';
 
 const User = (props) => {
-    const {id, name, surname, email, address}=props;
+    const {id, name, surname, email} = props;
     return (
-        <div className={'users'}>
-             <h1>Список users з "jsonplaceholder.typicode.com"</h1>
-            {/*{id}--{name}--{surname}--{email}--{address}*/}
+        <div className={'cardUsers'}>
             <div>id: {id}</div>
             <div>name: {name}</div>
             <div>surname: {surname}</div>
             <div>email: {email}</div>
-            <div>address: {address}</div>
-
         </div>
     );
 };

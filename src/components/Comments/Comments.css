@@ -1,0 +1,7 @@
+.wrapComments{
+    max-width: 90%;
+    max-height: 100%;
+    width: 100%;
+    border: solid 3px red;
+    margin: 10px;
+}
