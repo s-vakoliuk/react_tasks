@@ -23,7 +23,7 @@ function App() {
     <div className={'wrap'}>
         <div>
             <Users getUser={getUser()}/>
-            {user&&<UserDetails user={user}/>}
+            {user && <UserDetails user={user} getUserId={getUserId}/>}
         </div>
         {userId&&<Posts/>}
     </div>
