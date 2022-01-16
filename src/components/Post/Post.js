@@ -1,7 +1,7 @@
 import './Post.css';
 
-const Post = (props) => {
-    const {UserId, id, title, body} = props;
+const Post = ({post:{UserId, id, title, body}}) => {
+
     return (
         <div className={'cardPost'}>
             <div>UserId: {UserId}</div>
