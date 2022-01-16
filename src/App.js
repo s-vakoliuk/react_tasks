@@ -25,7 +25,7 @@ function App() {
             <Users getUser={getUser()}/>
             {user && <UserDetails user={user} getUserId={getUserId}/>}
         </div>
-        {userId&&<Posts/>}
+        {userId && <Posts userId={userId}/>}
     </div>
   );
 }
