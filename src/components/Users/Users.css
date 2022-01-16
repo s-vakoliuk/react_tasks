@@ -1,0 +1,8 @@
+.wrapUsers{
+    max-width: 50%;
+    max-height: 50%;
+    width: 400px;
+    border: solid 3px green;
+    margin: 10px;
+    display: flex;
+}
