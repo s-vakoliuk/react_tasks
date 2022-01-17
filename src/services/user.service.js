@@ -1,6 +1,6 @@
-import {axiosServices} from "./axios.service";
+import {axiosService} from "./axios.service";
 import {urls} from "../configs/urls";
 
 export const userService={
-    getAll:()=>axiosServices.get(urls.users).then(value=>value.data)
+    getAll:()=>axiosService.get(urls.users).then(value=>value.data)
 }

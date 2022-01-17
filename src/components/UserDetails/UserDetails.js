@@ -1,7 +1,7 @@
 import React from 'react';
 import './UserDetails.css';
 
-const UserDetails = ({user}) => {
+const UserDetails = ({user, getUserId}) => {
     const {id, name, username, email, address, phone, website, company}=user;
 
     return (
@@ -23,7 +23,7 @@ const UserDetails = ({user}) => {
                 <br/>{company.catchPhrase}
                 <br/>{company.bs}
             </p>
-            <button>Show user`s posts</button>
+            <button onClick={()=>getUserId(id)}>Show user`s posts</button>
         </div>
     );
 };

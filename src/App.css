@@ -1,5 +1,12 @@
+
 .wrap{
-  display: flex;
   border: solid 3px red;
   margin: 10px;
+  display: flex;
+}
+
+.wrapUsersDetails{
+  border: solid 3px lightblue;
+  margin: 10px;
+  display: flex;
 }

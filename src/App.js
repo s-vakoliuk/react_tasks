@@ -11,18 +11,18 @@ function App() {
     const [userId, setUserId] = useState(null);
 
     const getUser=(user)=>{
-        setUser(user)
-        setUserId(null)
+        setUser(user);
+        setUserId(null);
     }
 
     const getUserId = (id) => {
-        setUserId(id)
+        setUserId(id);
     }
 
     return (
-    <div className={'wrap'}>
-        <div>
-            <Users getUser={getUser()}/>
+    <div>
+        <div className={'wrapUsersDetails'}>
+            <Users getUser={getUser}/>
             {user && <UserDetails user={user} getUserId={getUserId}/>}
         </div>
         {userId && <Posts userId={userId}/>}
