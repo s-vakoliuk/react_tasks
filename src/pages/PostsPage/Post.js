@@ -1,0 +1,15 @@
+import css from './PostPage.module.css'
+
+const Post = ({post:{UserId, id, title, body}}) => {
+
+    return (
+        <div className={css.cardPost}>
+            <div>UserId: {UserId}</div>
+            <div>Id: {id}</div>
+            <div>Title: {title}</div>
+            <div>Body: {body}</div>
+        </div>
+    );
+};
+
+export default Post;

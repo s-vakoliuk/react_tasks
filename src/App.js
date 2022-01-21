@@ -1,25 +1,39 @@
-import logo from './logo.svg';
-import './App.css';
+import {Routes, Route} from "react-router-dom";
 
-function App() {
+import {Layout} from "./components";
+import {
+    PostCommentsPage,
+    PostDetailsPage,
+    PostsPage,
+    UserDetailsPage,
+    UserPostsPage,
+    UsersPage
+} from "./pages";
+
+import HomePage from "./pages/HomePage/HomePage";
+
+const App = () => {
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <>
+
+      <Routes>
+          <Route path={'/'} element={<Layout/>}>
+          <Route index element={<HomePage />}/>
+          <Route path={'users'} element={<UsersPage />}>
+              <Route path={':id'} element={<UserDetailsPage />}>
+                  <Route path={'posts'} element={<UserPostsPage />}/>
+              </Route>
+          </Route>
+          <Route path={'posts'} element={<PostsPage />}>
+              <Route path={':id'} element={<PostDetailsPage />}>
+                  <Route path={'comments'} element={<PostCommentsPage />}/>
+              </Route>
+          </Route>
+          </Route>
+      </Routes>
+      </>
   );
-}
+};
 
 export default App;

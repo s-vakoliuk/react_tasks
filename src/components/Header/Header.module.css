@@ -1,0 +1,14 @@
+.header{
+    min-width: 100px;
+    background-color: blue;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+.header a{
+    text-decoration: none;
+    font-size: 40px ;
+    color: yellow;
+}

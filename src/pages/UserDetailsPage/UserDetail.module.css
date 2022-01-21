@@ -1,0 +1,7 @@
+.cardUserDetails{
+    max-width: 100%;
+    max-height: 100%;
+    width: 50%;
+    border: solid 3px orange;
+    margin: 10px;
+}
