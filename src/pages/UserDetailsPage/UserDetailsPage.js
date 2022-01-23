@@ -1,16 +1,11 @@
 import React from 'react';
-import {Link, Outlet, useLocation, useParams} from "react-router-dom";
+import {Link, Outlet, useLocation} from "react-router-dom";
 
 import css from "../UsersPage/UserPage.module.css";
 
-
 const UserDetailsPage = () => {
     const {state} = useLocation();
-    console.log(state)
-
-    const params=useParams();
-    console.log(params);
-
+    console.log(state);
 
     return (
         <div className={css.cardUserDetails}>
@@ -34,7 +29,7 @@ const UserDetailsPage = () => {
                 {/*</p>*/}
                 {/*<button >Posts User</button>*/}
             {JSON.stringify(state)}
-            <Link to={params.toString()} ><button >Posts User</button></Link>
+            <Link to={'posts'} ><button >Posts User</button></Link>
             <Outlet/>
         </div>
     );
