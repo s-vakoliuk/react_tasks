@@ -5,12 +5,13 @@ import {
     PostCommentsPage,
     PostDetailsPage,
     PostsPage,
-    UserDetails,
+    UserDetailsPage,
     UserPostsPage,
     UsersPage
 } from "./pages";
 
 import HomePage from "./pages/HomePage/HomePage";
+
 
 const App = () => {
 
@@ -21,7 +22,7 @@ const App = () => {
           <Route path={'/'} element={<Layout/>}>
           <Route index element={<HomePage />}/>
           <Route path={'users'} element={<UsersPage />}>
-              <Route path={':id'} element={<UserDetails />}>
+              <Route path={':id'} element={<UserDetailsPage />}>
                   <Route path={'posts'} element={<UserPostsPage />}/>
               </Route>
           </Route>
