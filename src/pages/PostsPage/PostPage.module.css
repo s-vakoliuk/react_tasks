@@ -1,16 +1,17 @@
+.wrapPosts{
+    max-width: 98%;
+    max-height: 100%;
+    width: 100%;
+    border: solid 3px lightblue;
+    margin: 10px;
+}
+
 
 .cardPost{
-    max-width: 100%;
+    max-width: 50%;
     max-height: 100%;
     width: 98%;
     border: solid 3px yellow;
     margin: 10px;
 }
 
-.wrapPosts{
-    max-width: 98%;
-    max-height: 100%;
-    width: 100%;
-    border: solid 3px violet;
-    margin: 10px;
-}

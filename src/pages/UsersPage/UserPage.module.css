@@ -1,20 +1,29 @@
-.wrapUsers{
-    width: 98%;
+.wrapPage{
+    max-width: 100%;
+    max-height: 100%;
     border: solid 3px red;
+    display: flex;
+}
+
+.wrapCardUsers{
+    width: 50%;
+    border: solid 3px orange;
 }
 
 .cardUser{
     max-width: 100%;
     max-height: 100%;
-    width: 300px;
-    border: solid 3px orange;
+    border: solid 3px yellow;
     margin: 10px;
+    display: flex;
 }
 
 .cardUserDetails{
     max-width: 100%;
     max-height: 100%;
-    width: 50%;
     border: solid 3px green;
     margin: 10px;
+}
+button{
+    margin-left: 10px;
 }

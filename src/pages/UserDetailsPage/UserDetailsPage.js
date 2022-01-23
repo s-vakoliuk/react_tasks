@@ -1,34 +1,41 @@
 import React from 'react';
-import css from "../UsersPage/UserPage.module.css";
-import {Outlet} from "react-router-dom";
+import {Link, Outlet, useLocation, useParams} from "react-router-dom";
 
-const UserDetailsPage = ({user, getUserId}) => {
-    const {id, name, username, email, address, phone, website, company}=user;
+import css from "../UsersPage/UserPage.module.css";
+
+
+const UserDetailsPage = () => {
+    const {state} = useLocation();
+    console.log(state)
+
+    const params=useParams();
+    console.log(params);
+
 
     return (
-        <div>
-            <div className={css.cardUserDetails}>
-            <h4>{id}.{name}</h4>
-            <p>Username: {username}</p>
-            <p>Email:{email}</p>
-            <p>Address:
-                <br/>street: {address.street};
-                <br/>suite:  {address.suite};
-                <br/>city: {address.city};
-                <br/>zipcode: {address.zipcode};
-            <p>geo: lat: {address.geo.lat}, lng: {address.geo.lng}</p>
-            </p>
-            <p>Phone: {phone}</p>
-            <p>Website: {website}</p>
-            <p>Company:
-                <br/>{company.name}
-                <br/>{company.catchPhrase}
-                <br/>{company.bs}
-            </p>
-            <button onClick={()=>getUserId(id)}>User Details</button>
-        <Outlet/>
-        </div>
-    );
+        <div className={css.cardUserDetails}>
+                {/*<h4>{state.id} - {state.name} </h4>*/}
+                {/*<p>Username: {state.username}</p>*/}
+                {/*<p>Username: {state.username}</p>*/}
+                {/*<p>Email:{state.email}</p>*/}
+                {/*<p>Address:*/}
+                {/*    <br/>street: {state.address.street};*/}
+                {/*    <br/>suite:  {state.address.suite};*/}
+                {/*    <br/>city: {state.address.city};*/}
+                {/*    <br/>zipcode: {state.state.address.zipcode};*/}
+                {/*<p>geo: lat: {state.address.geo.lat}, lng: {state.address.geo.lng}</p>*/}
+                {/*</p>*/}
+                {/*<p>Phone: {state.phone}</p>*/}
+                {/*<p>Website: {state.website}</p>*/}
+                {/*<p>Company:*/}
+                {/*    <br/>{state.company.name}*/}
+                {/*    <br/>{state.company.catchPhrase}*/}
+                {/*    <br/>{state.company.bs}*/}
+                {/*</p>*/}
+                {/*<button >Posts User</button>*/}
+            {JSON.stringify(state)}
+            <Link to={params.toString()} ><button >Posts User</button></Link>
+            <Outlet/>
         </div>
     );
 };
