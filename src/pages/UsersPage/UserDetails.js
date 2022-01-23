@@ -1,13 +1,14 @@
+import React from "react";
 import {Outlet} from "react-router-dom";
 
-import css from "./UserDetail.module.css";
-import React from "react";
+import css from './UserPage.module.css';
 
-const UserDetailsPage = ({user, getUserId}) => {
+
+const UserDetails = ({user, getUserId}) => {
   const {id, name, username, email, address, phone, website, company}=user;
 
     return (
-        <div className={css.UserDetails}>
+        <div className={css.cardUserDetails}>
             <h4>{id}.{name}</h4>
             <p>Username: {username}</p>
             <p>Email:{email}</p>
@@ -30,4 +31,4 @@ const UserDetailsPage = ({user, getUserId}) => {
         </div>
     );
 };
-export {UserDetailsPage};
+export {UserDetails};

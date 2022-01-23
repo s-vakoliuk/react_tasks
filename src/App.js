@@ -5,7 +5,7 @@ import {
     PostCommentsPage,
     PostDetailsPage,
     PostsPage,
-    UserDetailsPage,
+    UserDetails,
     UserPostsPage,
     UsersPage
 } from "./pages";
@@ -21,7 +21,7 @@ const App = () => {
           <Route path={'/'} element={<Layout/>}>
           <Route index element={<HomePage />}/>
           <Route path={'users'} element={<UsersPage />}>
-              <Route path={':id'} element={<UserDetailsPage />}>
+              <Route path={':id'} element={<UserDetails />}>
                   <Route path={'posts'} element={<UserPostsPage />}/>
               </Route>
           </Route>
