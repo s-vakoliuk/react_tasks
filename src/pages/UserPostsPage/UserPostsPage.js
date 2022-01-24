@@ -15,12 +15,19 @@ const UserPostsPage = () => {
 
 
     return (
-        <div>
-            UserPostsPage
+        <>
+            {/*<h3>UserPostsPage</h3>*/}
+            {/*{posts.map((post)=> (*/}
+            {/*    <div>*/}
+            {/*    <h4>{post.id}</h4>*/}
+            {/*    <p>{post.title}</p>*/}
+            {/*    <p>{post.body}</p>*/}
+            {/*    </div>*/}
+            {/*    ))}*/}
+
             {JSON.stringify(posts)}
              <Outlet/>
-        </div>
+        </>
     );
 };
-
 export {UserPostsPage};
