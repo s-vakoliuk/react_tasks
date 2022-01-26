@@ -1,30 +1,19 @@
 import React from 'react';
-import {Link, Outlet} from "react-router-dom";
-import {useEffect, useState} from "react";
+import {Outlet} from "react-router-dom";
 
-import {postService} from "../../services/post.service"
+import PostsList from "../../components/PostsList/PostsList";
 import css from './PostPage.module.css';
 
 
-const PostsPage = ({getPost}) => {
-
-    const [posts, setPosts]=useState([]);
-
-    useEffect(()=>{
-        postService.getAll().then(value=>setPosts([...value]))
-    }, [])
-
+const PostsPage = () => {
     return (
-         <div className={css.wrapPosts}>
-             {posts && posts.map((post, key={})=>(
-                 <div className={css.cardPost}>
-                     <div>UserId: {post.id}</div>
-                     <div>Title: {post.title}</div>
-                     <div>Body: {post.body}</div>
-                     <Link to={post.id.toString()}><button>Get Posts Details</button></Link>
-             </div>))}
-             <Outlet/>
-         </div>
+
+        <div className={css.wrapPostsPage}>
+
+            <PostsList/>
+        <Outlet/>
+
+        </div>
     );
 };
 

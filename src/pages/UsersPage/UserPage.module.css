@@ -19,14 +19,14 @@
 }
 
 .cardUserDetails{
-    max-width: 100%;
-    max-height: 100%;
+    width: 50%;
+    height: 100%;
     border: solid 3px green;
     margin: 10px;
 }
 
 css.listUsersPosts{
-    max-width: 100%;
+    width: 100%;
     max-height: 100%;
     border: solid 3px violet;
     margin: 10px;

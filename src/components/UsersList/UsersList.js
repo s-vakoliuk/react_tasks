@@ -10,18 +10,17 @@ const UsersList = () => {
     const [users, setUsers] = useState([]);
 
     useEffect(()=>{
-        userService.getAll().then(value=>setUsers(value))
+        userService.getAll().then(value=>setUsers([...value]))
      }, [])
 
     console.log(users);
 
     return (
-        <div className={css.cardUser}>
+        <div className={css.wrapCardUsers}>
             {/*Виводжу вміст users методом map і зберігаю в масив user інформацію з компоненти User*/}
             {
-                users.map((user)=> <User key={user.id} item={user}/>)
+                users && users.map((user)=> <User key={user.id} item={user}/>)
             }
-
             <Outlet/>
         </div>
     );

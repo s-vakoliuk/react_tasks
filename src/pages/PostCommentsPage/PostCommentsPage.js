@@ -1,15 +1,13 @@
 import React, {useEffect, useState} from 'react';
-import {Outlet, useLocation, useParams} from "react-router-dom";
-import {postService} from "../../services/post.service";
+import {Outlet, useParams} from "react-router-dom";
 
+import {postService} from "../../services/post.service";
+import css from "../PostsPage/PostPage.module.css";
 
 const PostCommentsPage = () => {
 
     const {id}=useParams();
     console.log("id", id);
-
-    const {state} = useLocation();
-    console.log("comments", state);
 
     const [comments, setComments] = useState([]);
 
@@ -18,9 +16,9 @@ const PostCommentsPage = () => {
      }, [id])
 
     return (
-        <div>
+        <div className={css.cardCommentsDetails}>
             PostCommentsPage
-            JSON.stringify(state);
+            {JSON.stringify(comments)}
             <Outlet/>
         </div>
     );
