@@ -11,7 +11,7 @@ const PostsPage = ({getPost}) => {
     const [posts, setPosts]=useState([]);
 
     useEffect(()=>{
-        postService.getAll().then(value=>setPosts(value))
+        postService.getAll().then(value=>setPosts([...value]))
     }, [])
 
     return (

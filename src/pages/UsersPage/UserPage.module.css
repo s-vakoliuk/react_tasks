@@ -15,7 +15,7 @@
     max-height: 100%;
     border: solid 3px yellow;
     margin: 10px;
-    display: flex;
+
 }
 
 .cardUserDetails{
@@ -24,6 +24,14 @@
     border: solid 3px green;
     margin: 10px;
 }
+
+css.listUsersPosts{
+    max-width: 100%;
+    max-height: 100%;
+    border: solid 3px violet;
+    margin: 10px;
+}
+
 button{
     margin-left: 10px;
 }

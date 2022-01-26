@@ -2,20 +2,21 @@ import {Outlet, useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 
 import {userService} from "../../services/user.service";
+import css from "../UsersPage/UserPage.module.css";
 
 const UserPostsPage = () => {
     const {id}=useParams();
-    console.log(id);
+    console.log("id", id);
     const [posts, setPosts] = useState([]);
-    console.log(posts);
+    console.log("posts", posts);
 
     useEffect(()=>{
-        userService.getById(id).then(value=>setPosts({...value}))
+        userService.getById(id).then(value=>setPosts([...value]))
      }, [])
 
 
     return (
-        <>
+        <div className={css.listUsersPosts}>
             {/*<h3>UserPostsPage</h3>*/}
             {/*{posts.map((post)=> (*/}
             {/*    <div>*/}
@@ -27,7 +28,7 @@ const UserPostsPage = () => {
 
             {JSON.stringify(posts)}
              <Outlet/>
-        </>
+        </div>
     );
 };
 export {UserPostsPage};
