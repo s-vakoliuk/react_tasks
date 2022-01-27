@@ -1,7 +1,8 @@
 import React from 'react';
-import {Link, useLocation} from "react-router-dom";
+import {Link, Outlet, useLocation} from "react-router-dom";
 
 import css from "../UsersPage/UserPage.module.css";
+
 
 const UserDetailsPage = () => {
     // Використовуємо useLocation для відхоплення user в полі state об'єкту useLocation
@@ -30,6 +31,7 @@ const UserDetailsPage = () => {
                 </p>
             {/*{JSON.stringify(state)}*/}
             <Link to={'posts'}><button>Posts User</button></Link>
+            <Outlet/>
 
         </div>
     );
