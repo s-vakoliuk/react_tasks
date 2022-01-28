@@ -1,0 +1,5 @@
+.AppWrap{
+    border: solid 3px red;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,5 @@
+.MainWrap{
+    border: solid 3px green;
+    display: flex;
+    flex-direction: row;
+}

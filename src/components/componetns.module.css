@@ -1,0 +1,9 @@
+.CatsList{
+    width: 50%;
+    border: solid 3px lightblue;
+}
+
+.DogsList{
+    width: 50%;
+    border: solid 3px blue;
+}
