@@ -3,3 +3,13 @@
     display: flex;
     flex-direction: column;
 }
+
+h3{
+    text-align: center;
+}
+
+.FormWrap{
+    width: 100%;
+    border: solid 3px green;
+    display: flex;
+}

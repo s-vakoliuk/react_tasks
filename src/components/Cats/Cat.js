@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Cat = ({nameCat}) => {
+const Cat = ({cat:{id,name}, getCatId}) => {
     return (
         <div>
-            <p>{nameCat}</p>
+            <div>Name: {name}</div>
+            <button onClick={()=>getCatId(id)}>Delete</button>
         </div>
     );
 };
