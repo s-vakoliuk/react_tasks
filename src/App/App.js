@@ -1,10 +1,8 @@
 import React, {useState} from "react";
 
 import css from './App.module.css';
-import Cats from "../components/Cats/Cats";
-import Dogs from "../components/Dogs/Dogs";
-import FormCats from "../components/Forms/FormCats";
-import FormDogs from "../components/Forms/FormDogs";
+import {Cats,FormCats} from "../components";
+import {Dogs, FormDogs} from "../components";
 
 function App() {
 
@@ -13,16 +11,20 @@ function App() {
 
     // Функція getDataOfFormCats для витягування даних в змінній data з FormCats
     const getDataOfFormCats=(data=>{
-        setCats([...cats, {id:new Date().getTime(), ...data}])
+        setCats([...cats, {id:new Date().getTime(), ...data}]) //id отримуємо з new Date().getTime()
     })
+
+    const getCatId =(id)=>{
+        setCats(cats.filter(cat=>cat.id!==id))
+    }
 
     // Функція getDataOfFormDogs для витягування даних в змінній data з FormDogs
     const getDataOfFormDogs=(data=>{
-
+        setDogs([...dogs, {id:new Date().getTime(), ...data}]) //id отримуємо з new Date().getTime()
     })
 
-    const detCatId =(id)=>{
-
+    const getDogId =(id)=>{
+        setDogs(dogs.filter(dog=>dog.id!==id))
     }
 
     return (
@@ -31,8 +33,10 @@ function App() {
               <FormCats getDataOfFormCats={getDataOfFormCats}/>
               <FormDogs getDataOfFormDogs={getDataOfFormDogs}/>
           </div>
-          <Cats cats = {cats} getCatId={getCatId}/>
-          <Dogs dogs = {dogs}/>
+          <div className={css.CatsDogsWrap}>
+              <Cats getCatId={getCatId} cats={cats}/>
+              <Dogs getDogId={getDogId} dogs={dogs}/>
+          </div>
       </div>
   );
 }

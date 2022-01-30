@@ -9,4 +9,4 @@ const Cat = ({cat:{id,name}, getCatId}) => {
     );
 };
 
-export default Cat;
+export {Cat};

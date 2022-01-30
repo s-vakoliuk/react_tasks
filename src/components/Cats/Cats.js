@@ -1,7 +1,7 @@
 import React from 'react';
 
-import css from'../componetns.module.css'
-import Cat from "./Cat";
+import css from '../components.module.css'
+import {Cat} from "./Cat";
 
 const Cats = ({cats, getCatId}) => {
     return (
@@ -12,4 +12,4 @@ const Cats = ({cats, getCatId}) => {
     );
 };
 
-export default Cats;
+export {Cats};

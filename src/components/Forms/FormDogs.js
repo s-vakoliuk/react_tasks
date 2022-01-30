@@ -1,34 +1,25 @@
-import React, {useState} from 'react';
+import React from 'react';
 
-import css from '../../Form/Form.module.css'
+import css from '../components.module.css'
+import {useForm} from "react-hook-form";
 
+const FormDogs = ({getDataOfFormDogs}) => {
+    const {handleSubmit, register, reset}= useForm();
 
-const FormDogs = () => {
-
-    const [nameDog, setNameDog]=useState('');
-
-    function onSubmit(event){
-        event.preventDefault();
-        // console.log(event.target.nameDog.value);
-        console.log(event);
-    }
-
-    function onNameDogChange (event) {
-        setNameDog(event.target.value);
+    const submit = (data) => {
+        getDataOfFormDogs(data)
+        reset()
     }
 
     return (
         <div className={css.FormDogs}>
-
             <h3>Введіть імена песиків-гавгесиків</h3>
-            <form onSubmit={onSubmit}>
-                Add Dog: <input type="text" name={'nameDog'} value={nameDog} onChange={onNameDogChange}/>
+            <form onSubmit={handleSubmit(submit)}>
+                <label>Add Cat: <input type="text" {...register('name')}/></label>
                 <button>Save</button>
             </form>
-            <p>{nameDog}</p>
-
         </div>
     );
 };
 
-export default FormDogs;
+export {FormDogs};

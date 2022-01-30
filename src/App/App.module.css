@@ -9,7 +9,11 @@ h3{
 }
 
 .FormWrap{
-    width: 100%;
     border: solid 3px green;
+    display: flex;
+}
+
+.CatsDogsWrap{
+    border: solid 3px violet;
     display: flex;
 }
